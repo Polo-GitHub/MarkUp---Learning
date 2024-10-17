@@ -117,6 +117,12 @@ img{
     font-size: 16px;
     background-color: transparent;
 }
+.user-input:invalid:not(:placeholder-shown){
+    border-color: var(--red);
+}
+.user-input:valid:not(:placeholder-shown){
+    border-color: none;
+}
 .input-placeholder{
     position: absolute;
     left: 0.7rem;
@@ -258,8 +264,12 @@ input[type="checkbox"]:checked:before{
 }
 .error{
     color: var(--red);
-    font-size: 1rem;
+    font-size: 14px;
+    display: none;
 }
+.error-border {
+    border-color: red;
+  }
 
 /* Media Queries */
 
