@@ -73,3 +73,14 @@ siteYear.innerHTML = new Date().getFullYear()
       clearError(bringWorld, pdMessageError);
     }
   });
+document.addEventListener("DOMContentLoaded", () => {
+  const isiPhone = /iPhone/.test(navigator.userAgent) && !window.MSStream;
+
+  if (isiPhone) {
+    document.querySelectorAll("input, textarea, select").forEach(input => {
+      input.style.borderRadius = "0";
+      input.style.outline = "none";
+    });
+  }
+});
+
