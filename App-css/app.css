@@ -115,6 +115,7 @@ img{
     width: 100%;
     height: 3.125rem;
     font-size: 16px;
+      border: 2px solid var(--lborder);
     background-color: transparent;
 }
 .user-input:invalid:not(:placeholder-shown){
