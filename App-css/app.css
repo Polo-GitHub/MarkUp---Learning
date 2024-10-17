@@ -118,6 +118,9 @@ img{
       border: 2px solid var(--lborder);
     background-color: transparent;
 }
+.user-input:foucs{
+    border-radius: 4px;
+}
 .user-input:invalid:not(:placeholder-shown){
     border-color: var(--red);
 }
