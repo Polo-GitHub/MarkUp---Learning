@@ -18,44 +18,58 @@ if(bringtoggle){
 const siteYear = document.querySelector(".site-year")
 siteYear.innerHTML = new Date().getFullYear() 
 
-document.addEventListener("DOMContentLoaded", function() {
+
+    const siteBodyForm = document.getElementById("site-bodyform");
     const bringWork = document.getElementById("bringwork");
     const bringWorld = document.getElementById("bringworld");
     const emMessageError = document.getElementById("emError");
     const pdMessageError = document.getElementById("pdError");
-    const siteBodyForm = document.getElementById("site-bodyform");
-  
-    // Function to clear error messages on input
-    function clearError(inputField, errorField) {
-      inputField.addEventListener("input", function() {
-        errorField.textContent = "";
-      });
+
+
+  // Helper function to show the error message and add red border
+  function showError(input, errorElement) {
+    input.classList.add('error-border');
+    errorElement.style.display = 'block';
+  }
+
+  // Helper function to remove the error message and red border
+  function clearError(input, errorElement) {
+    input.classList.remove('error-border');
+    errorElement.style.display = 'none';
+  }
+
+  // Form submission event listener
+  siteBodyForm.addEventListener('submit', function(event) {
+    let isValid = true;
+
+    // Check if username is empty
+    if (bringWork.value.trim() === '') {
+      showError(bringWork, emMessageError);
+      isValid = false;
     }
-  
-    // Validate form on submit
-    siteBodyForm.addEventListener("submit", function(event) {
-      let valid = true;
-  
-      // Email validation
-      if (bringWork.value.trim() === "") {
-        emMessageError.textContent = "Username is required";
-        valid = false;
-      }
-  
-      // Password validation
-      if (bringWorld.value.trim() === "") {
-        pdMessageError.textContent = "Password is required";
-        valid = false;
-      }
-  
-      // Prevent form submission if validation fails
-      if (!valid) {
-        event.preventDefault();
-      }
-    });
-  
-    // Clear error messages when user starts typing
-    clearError(bringWork, emMessageError);
-    clearError(bringWorld, pdMessageError);
+
+    // Check if password is empty
+    if (bringWorld.value.trim() === '') {
+      showError(bringWorld, pdMessageError);
+      isValid = false;
+    }
+
+    // If any field is invalid, prevent form submission
+    if (!isValid) {
+      event.preventDefault();
+    }
   });
-  
+
+  // Event listener to clear error when the user starts typing in the username field
+  bringWork.addEventListener('input', function() {
+    if (bringWork.value.trim() !== '') {
+      clearError(bringWork, emMessageError);
+    }
+  });
+
+  // Event listener to clear error when the user starts typing in the password field
+  bringWorld.addEventListener('input', function() {
+    if (bringWorld.value.trim() !== '') {
+      clearError(bringWorld, pdMessageError);
+    }
+  });
