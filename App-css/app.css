@@ -52,7 +52,7 @@ img{
 .site-body{
     display: flex;
     width: 100%;
-    padding: 4rem 0;
+    padding: 2rem 0;
 }
 .site-bodyleft{
     flex: 1;
@@ -73,13 +73,13 @@ img{
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    max-width: 37.5rem;
-    gap: 1.5rem;
+    max-width: 34.5rem;
+    gap: 1rem;
 }
 .site-bodyform{
     background-color: var(--white);
     border: 1px solid var(--lborder);
-    padding-bottom: 2.7rem;
+    padding-bottom: 1.5rem;
     border-bottom-left-radius:0.3125rem;
     border-bottom-right-radius:0.3125rem; 
   
@@ -120,12 +120,6 @@ img{
 }
 .user-input:foucs{
     border-radius: 4px;
-}
-.user-input:invalid:not(:placeholder-shown){
-    border-color: var(--red);
-}
-.user-input:valid:not(:placeholder-shown){
-    border-color: none;
 }
 .input-placeholder{
     position: absolute;
