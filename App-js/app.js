@@ -61,14 +61,14 @@ siteYear.innerHTML = new Date().getFullYear()
   });
 
   // Event listener to clear error when the user starts typing in the username field
-  bringWork.addEventListener('input', function() {
+  bringWork.addEventListener('input', () => {
     if (bringWork.value.trim() !== '') {
       clearError(bringWork, emMessageError);
     }
   });
 
   // Event listener to clear error when the user starts typing in the password field
-  bringWorld.addEventListener('input', function() {
+  bringWorld.addEventListener('input', () => {
     if (bringWorld.value.trim() !== '') {
       clearError(bringWorld, pdMessageError);
     }
